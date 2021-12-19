@@ -1,0 +1,45 @@
+Task 7:
+Input a string s, output a string made of the first 2
+and the last 2 chars of the original string,
+so 'spring' yields 'spng'. However, if the string length
+is less than 2, return string s instead the empty string.
+
+Visual Basic:
+
+Module Module1
+
+    Sub Main()
+        'Declarations
+        Dim S As String
+        Dim FinalS As String
+        Dim S2 As String
+        Dim S3 As String
+
+        'Initialization
+        S = ""
+        FinalS = ""
+        S2 = ""
+        S3 = ""
+
+        'Input
+        Console.Write("Enter string to process: ")
+        S = Console.ReadLine
+
+        'Process
+        If Len(S) < 2 Then
+            FinalS = S
+        Else : S2 = Right(S, 2)
+            S3 = Left(S, 2)
+            FinalS = S3 & S2
+        End If
+
+        'Output
+        Console.Write("String after process is: " & FinalS)
+
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
+

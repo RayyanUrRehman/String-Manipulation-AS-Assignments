@@ -1,0 +1,23 @@
+Task 7:
+Input a string s, output a string made of the first 2
+and the last 2 chars of the original string,
+so 'spring' yields 'spng'. However, if the string length
+is less than 2, return string s instead the empty string.
+
+PSEUDOCODE:
+
+Declare S, S2, S3, finalS ← String
+
+S, S2, S3, finalS ← ""
+
+Input "Enter string to process", S
+If Len(S) < 2 then
+    FinalS ← S
+Else S2 ← Right(S, 2)
+     S3 ← Left(S, 2)
+     FinalS ← S3 & S2
+End If 
+
+Output "String after process is: ", FinalS
+
+

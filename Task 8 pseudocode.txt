@@ -1,0 +1,41 @@
+Task 8: 
+Given a string s, return a string
+where all occurences of its first char have
+been changed to '*', except do not change
+the first char itself.
+e.g., 'babble' yields 'ba*le' or 'alpha' outputs 'alph'
+Assume that the string is length 1 or more.
+
+PSEUDOCODE:
+
+Declare S ← string
+Declare S2 ← string
+Declare S3 ← string
+Declare char1 ← character
+Declare c ← character
+Declare i ← Integer
+
+S ← ""
+S2 ← ""
+S3 ← ""
+char1 ← ''
+c ← ''
+i ← 0
+
+Input "Enter string to process: ", S
+char1 ← Left(S, 1)
+ S2 ← Mid(S, 2, Len(S))
+        For i ← 1 To Len(S2)
+            c ← Mid(S2, i, 1)
+            If Asc(c) <> Asc(char1) Then
+                S3 ← S3 + c
+            Else
+                S3 ← S3 + "*"
+            End If
+        Next
+
+Output "String after process is: " + char1 + S3
+End
+
+
+

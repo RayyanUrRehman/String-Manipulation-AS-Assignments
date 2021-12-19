@@ -1,0 +1,22 @@
+
+Declare str1 as string 
+Declare findnot as integer
+Declare findbad as integer
+Declare finalstr as string 
+
+str1 ← ""
+findnot ← 0
+findbad ← 0
+finalstr ← ""
+
+input ("Enter String: ",str1)
+
+findnot ← LOCATE (str1, " not")
+findbad ← LOCATE (str1, " bad")
+
+if findbad > findnot then
+	finalstr ← left (str1, findnot) & "good" & MID (str1, findbad + 4, len(str))   
+	ouput finalstr
+else 
+	output ("The word BAD does not follow the word NOT.")
+End

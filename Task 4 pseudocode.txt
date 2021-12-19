@@ -1,0 +1,33 @@
+Task 4:
+Find the character that appears most number of times in an entered string and output it.
+
+
+PSEUDOCODE:
+
+Declare c, i, count, mostcount : Integer     
+Declare char1, mostchar : Character
+Declare str1 : String
+
+c, i, count, mostcount ← 0
+char1, mostchar ← ' '
+str1 ← " "
+
+Input "Enter string to process: ", str1
+
+For c ← 1 To Len(str1)
+            char1 ← Mid(str1, c, 1)
+            For i ← 1 To Len(str1)
+                If Mid(str1, i, 1) ← char1 Then
+                    count ← count + 1
+                End If
+            Next
+            If count >= mostcount Then
+                mostcount ← count
+                mostchar ← char1
+            End If
+            count ← 0
+        Next 
+
+Output "Most repeated character is: " + mostchar + "repetition count: " + mostcount
+
+End

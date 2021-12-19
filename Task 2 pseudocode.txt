@@ -1,0 +1,31 @@
+Task 2: Replace selected character with another character in entered string 
+
+PSEUDOCODE:
+
+Declare str1,str2 : string
+Declare char1,char2,c : character
+Declare i : Integer
+
+str1 ← ""
+str2 ← ""
+char1 ← ''
+char2 ← ''
+c ← ''
+i ← 0
+
+Input "Enter string to process: ", str1
+Input "Enter character to replace: ", char1
+Input "Enter character to replace with: ", char2
+str1 ← Lcase(str1)
+
+For i ← 1 to Len(str1)
+    c ← Mid(str1, i , 1)
+    If  c = char1 then
+        str2 ← str2 & char2
+        else str2 ← str2 & c
+    Endif
+Next
+
+Output "String after replacement is: ", str2
+
+

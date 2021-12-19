@@ -1,0 +1,61 @@
+Task 9:
+MixUp:
+Given strings a and b, return a single string with a and b separated
+by a space '<a> <b>', except swap the first 2 chars of each string.
+e.g.
+  'mix', pod' -> 'pox mid'
+  'dog', 'dinner' -> 'dig donner'
+  Assume a and b are length 2 or more.
+
+Visual basic:
+
+Module Module1
+
+    Sub Main()
+
+        'Declarations
+        Dim str1 As String
+        Dim str2 As String
+        Dim a As String
+        Dim b As String
+        Dim achar2 As String
+        Dim bchar2 As String
+
+        'Initializations
+        str1 = ""
+        str2 = ""
+        a = ""
+        b = ""
+        achar2 = ""
+        bchar2 = ""
+
+        'Input
+        Console.Write("Enter first string to process: ")
+        a = Console.ReadLine
+        Console.Write("Enter second string to process: ")
+        b = Console.ReadLine
+
+        'Process
+        achar2 = Left(a, 2)
+        str1 = Mid(a, 3, Len(a) - 2)
+        bchar2 = Left(b, 2)
+        str2 = Mid(b, 3, Len(b) - 2)
+
+        'Output
+        Console.Write("String after process is: " & bchar2 & str1 & " " & achar2 & str2)
+
+        Console.ReadKey()
+
+
+
+
+
+    End Sub
+
+End Module
+
+
+
+
+
+

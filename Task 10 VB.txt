@@ -1,0 +1,50 @@
+Task 10: 
+verbing:
+Given a string, if its length is at least 3,
+add 'ing' to its end.
+Unless it already ends in 'ing', in which case
+add 'ly' instead.
+If the string length is less than 3, leave it unchanged.
+Return the resulting string.
+examples:
+input 'end' --> 'ending'
+input 'ending' --> 'endingly'         
+input 'go' --> 'go'
+
+Visual Basic:
+
+Module Module1
+
+    Sub Main()
+        'Declarations
+        Dim Str1 As String
+        Dim finalstr As String
+
+        'Initialization
+        Str1 = ""
+        finalstr = ""
+
+        'Input + Case neutralization
+        Console.Write("Enter string to process: ")
+        Str1 = Console.ReadLine
+        Str1 = LCase(Str1)
+
+        'Process
+        If Len(Str1) < 3 Then
+            finalstr = Str1
+        ElseIf Right(Str1, 3) = "ing" Then
+            finalstr = Str1 & "ly"
+        Else : finalstr = Str1 & "ing"
+        End If
+
+        'Output
+        Console.Write("String after process is: " & finalstr)
+
+        Console.ReadKey()
+
+
+
+    End Sub
+
+End Module
+

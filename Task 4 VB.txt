@@ -1,0 +1,58 @@
+Task 4:
+Find the character that appears most number of times in an entered string and output it.
+
+Visual basic:
+
+
+Module Module1
+
+    Sub Main()
+        'declaration
+        Dim c As Integer
+        Dim i As Integer
+        Dim char1 As Char
+        Dim str1 As String
+        Dim count As Integer
+        Dim mostcount As Integer
+        Dim mostchar As Char
+
+        'Initialization
+        c = 0
+        i = 0
+        count = 0
+        mostcount = 0
+        char1 = ""
+        str1 = ""
+        mostchar = ""
+
+        'Input
+        Console.Write("Enter string to process: ")
+        str1 = Console.ReadLine
+
+        'Process
+        For c = 1 To Len(str1)
+            char1 = Mid(str1, c, 1)
+            For i = 1 To Len(str1)
+                If Mid(str1, i, 1) = char1 Then
+                    count = count + 1
+                End If
+            Next
+            If count >= mostcount Then
+                mostcount = count
+                mostchar = char1
+            End If
+            count = 0
+        Next
+
+        'Output
+        Console.Write("Most repeated character is: " & mostchar & "      Repetition count: " & mostcount)
+
+        Console.ReadKey()
+
+
+
+
+
+    End Sub
+
+End Module

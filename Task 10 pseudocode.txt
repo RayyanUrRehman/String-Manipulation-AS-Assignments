@@ -1,0 +1,36 @@
+Task 10: 
+verbing:
+Given a string, if its length is at least 3,
+add 'ing' to its end.
+Unless it already ends in 'ing', in which case
+add 'ly' instead.
+If the string length is less than 3, leave it unchanged.
+Return the resulting string.
+examples:
+input 'end' --> 'ending'
+input 'ending' --> 'endingly'         
+input 'go' --> 'go'
+_________________________________________________________________
+
+PSEUDOCODE:
+
+Declare finalstr, str1 : String
+
+finalstr ← ""
+str1 ← ""
+
+Input "Enter string to process: ", str1
+str1 = Lcase(str1)
+
+If Len(str1) < 3 then
+finalstr ← str1
+ElseIf Right(str1,3) = "ing" then
+finalstr ← str1 + "ly"
+Else finalstr ← str1 + "ing"
+EndIf
+
+Output "String after process is: ", finalstr
+
+End
+ 
+

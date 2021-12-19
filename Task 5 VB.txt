@@ -1,0 +1,64 @@
+Task 5: Find the count of vowel characters in an entered string seperately
+
+Visual basic:
+
+Module Module1
+
+    Sub Main()
+        'Declarations
+        Dim str1 As String
+        Dim char1 As Char
+        Dim vowelA As Integer
+        Dim vowelE As Integer
+        Dim vowelI As Integer
+        Dim vowelO As Integer
+        Dim vowelU As Integer
+        Dim i As Integer
+
+        'Initializing
+        str1 = ""
+        char1 = ""
+        vowelA = 0
+        vowelE = 0
+        vowelI = 0
+        vowelO = 0
+        vowelU = 0
+        i = 0
+
+        'Input + Case neutralization
+        Console.Write("Enter string to process: ")
+        str1 = Console.ReadLine
+        str1 = LCase(str1)
+
+        'Process
+        For i = 1 To Len(str1)
+            char1 = Mid(str1, i, 1)
+            If Asc(char1) = Asc("a") Then
+                vowelA = vowelA + 1
+            ElseIf Asc(char1) = Asc("e") Then
+                vowelE = vowelE + 1
+            ElseIf Asc(char1) = Asc("i") Then
+                vowelI = vowelI + 1
+            ElseIf Asc(char1) = Asc("o") Then
+                vowelO = vowelO + 1
+            ElseIf Asc(char1) = Asc("u") Then
+                vowelU = vowelU + 1
+            End If
+        Next
+
+        'Output
+        Console.WriteLine("Number of A: " & vowelA)
+        Console.WriteLine("Number of E: " & vowelE)
+        Console.WriteLine("Number of I: " & vowelI)
+        Console.WriteLine("Number of O: " & vowelO)
+        Console.WriteLine("Number of U: " & vowelU)
+
+        Console.ReadKey()
+
+
+
+
+
+    End Sub
+
+End Module

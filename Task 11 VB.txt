@@ -1,0 +1,45 @@
+Task 11: 
+not_bad:
+Given a string, find the first appearance of the
+substring 'not' and 'bad'. If the 'bad' follows
+the 'not', replace the whole 'not'...'bad' substring
+with 'good'.
+Return the resulting string.
+Input: 'This dinner is not that bad!'      
+Outputs: This dinner is good!
+
+Visual Basic:
+
+Module Module1
+
+    Sub Main()
+        'declaration 
+        Dim str1 As String
+        Dim findnot As Integer
+        Dim findbad As Integer
+        Dim finalstr As String
+
+        'intialization 
+        str1 = ""
+        findnot = 0
+        findbad = 0
+        finalstr = ""
+
+        Console.Write("Enter String to process: ")
+        str1 = Console.ReadLine()
+
+        findnot = InStr(str1, " not")
+        findbad = InStr(str1, " bad")
+
+        If findbad > findnot Then
+            finalstr = Left(str1, findnot) & "good" & Mid(str1, findbad + 4, Len(str1))
+            Console.WriteLine("String after process is: " & finalstr)
+        Else
+            Console.WriteLine("The word BAD does not follow the word NOT. ")
+        End If
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module

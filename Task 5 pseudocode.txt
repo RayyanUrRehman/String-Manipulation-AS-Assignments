@@ -1,0 +1,39 @@
+Task 5: Find the count of vowel characters in an entered string seperately
+
+PSEUDOCODE:
+
+Declare str1 : string
+Declare char1 : character
+Declare vowelA,vowelE,vowelI,vowelO,vowelU,i : Integer
+
+str1 ← ""
+char1 ← ''
+vowelA,vowelE,vowelI,vowelO,vowelU,i ← 0
+
+Input "Enter string to process: ", str1
+str1 ← Lcase(str1)
+
+for i ← 1 to len(str1)
+char1 ← MID(str1, i, 1)
+  if ASC(char1) = ASC("a") then
+    vowelA ← vowelA + 1
+    Elseif ASC(char1) = ASC("e") then
+    vowelE ← vowelE + 1
+    Elseif ASC(char1) = ASC("i") then
+    vowelI ← vowelI + 1
+    Elseif ASC(char1) = ASC("o") then
+    vowelO ← vowelO + 1
+    Elseif ASC(char1) = ASC("u") then
+    vowelU ← vowelU + 1
+  Endif
+Next
+Output "Number of A: ", vowelA
+Output "Number of E: ", vowelE
+Output "Number of I: ", vowelI
+Output "Number of O: ", vowelO
+Output "Number of U: ", vowelU
+
+End
+
+
+

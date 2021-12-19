@@ -1,0 +1,27 @@
+Task 9:
+MixUp:
+Given strings a and b, return a single string with a and b separated
+by a space '<a> <b>', except swap the first 2 chars of each string.
+e.g.
+  'mix', pod' -> 'pox mid'
+  'dog', 'dinner' -> 'dig donner'
+  Assume a and b are length 2 or more.
+
+PSEUDOCODE:
+
+Declare str1,str2,a,b,achar2,bchar2 ← String
+
+str1,str2,a,b,achar2,bchar2 ← " "
+
+Input "Enter first string to process: ", a
+Input "Enter second string to process:", b
+
+achar2 ← Left(a, 2)
+str1 ← Mid(a, 3, Len(a) - 2)
+bchar2 ← Left(b, 2)
+str2 ← Mid(b, 3, Len(b) - 2)
+
+Output "String after process is: " + bchar2 + str1 + " " + achar2 + str2
+
+End
+

@@ -1,0 +1,38 @@
+Task 6: 
+donuts:
+INPUT an INT count of a number of donuts, OUTPUT a string
+of the form 'Number of donuts: <count>', where <count> is the number
+input. However, if the count is 10 or more, then use the word 'many'
+instead of the actual count.
+So donuts(5) outputs 'Number of donuts: 5'
+and donuts(23) outputs 'Number of donuts: many'
+
+Visual Basic:
+
+Module Module1
+
+    Sub Main()
+        'Declarations
+        Dim count1 As Integer
+
+        'Initialization
+        count1 = 0
+
+        'Input
+        Console.Write("Enter number of donuts: ")
+        count1 = Console.ReadLine
+
+        'Process + Output
+        If count1 < 10 Then
+            Console.Write("Number of donuts: " & count1)
+        ElseIf count1 >= 10 Then
+            Console.Write("Number of donuts: many")
+        End If
+
+        Console.ReadKey()
+
+
+
+    End Sub
+
+End Module

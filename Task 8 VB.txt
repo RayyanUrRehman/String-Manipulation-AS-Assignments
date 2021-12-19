@@ -1,0 +1,55 @@
+Task 8: 
+Given a string s, return a string
+where all occurences of its first char have
+been changed to '*', except do not change
+the first char itself.
+e.g., 'babble' yields 'ba*le' or 'alpha' outputs 'alph'
+Assume that the string is length 1 or more.
+
+Visual basic:
+
+Module Module1
+
+    Sub Main()
+        'Declarations
+        Dim S As String
+        Dim S2 As String
+        Dim S3 As String
+        Dim char1 As Char
+        Dim c As Char
+        Dim i As Integer
+
+        'Initialization
+        S = ""
+        S2 = ""
+        S3 = ""
+        char1 = ""
+        c = ""
+        i = 0
+
+        'Input
+        Console.Write("Enter string to process: ")
+        S = Console.ReadLine
+
+        'Process
+        char1 = Left(S, 1)
+        S2 = Mid(S, 2, Len(S))
+        For i = 1 To Len(S2)
+            c = Mid(S2, i, 1)
+            If Asc(c) <> Asc(char1) Then
+                S3 = S3 & c
+            Else : S3 = S3 & "*"
+            End If
+        Next
+
+        'Output
+        Console.Write("String after process is: " & char1 & S3)
+
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
+
+ 

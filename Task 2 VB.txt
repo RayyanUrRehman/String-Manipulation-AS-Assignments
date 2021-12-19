@@ -1,0 +1,52 @@
+Task 2: Replace selected character with another character in entered string 
+
+Visual basic:
+
+Module Module1
+
+    Sub Main()
+        Dim str1 As String
+        Dim str2 As String
+        Dim char1 As Char
+        Dim char2 As Char
+        Dim c As Char
+        Dim i As Integer
+
+        str1 = ""
+        str2 = ""
+        char1 = ""
+        char2 = ""
+        c = ""
+        i = 0
+
+        'Input string, character to replace and character to be replaced.
+        Console.Write("Enter string to process: ")
+        str1 = Console.ReadLine
+        Console.Write("Enter character to replace: ")
+        char1 = Console.ReadLine
+        Console.Write("Enter character to replace with: ")
+        char2 = Console.ReadLine
+        str1 = LCase(str1)
+
+        'Process
+        For i = 1 To Len(str1)
+            c = Mid(str1, i, 1)
+            If c = char1 Then
+                str2 = str2 & char2
+            Else : str2 = str2 & c
+            End If
+        Next
+
+        'Output
+        Console.WriteLine("String after replacement is: " & str2)
+
+        Console.ReadKey()
+
+
+
+
+    End Sub
+
+End Module
+
+
